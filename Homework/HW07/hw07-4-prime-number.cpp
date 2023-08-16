@@ -29,7 +29,7 @@ int main(){
     {
         if (num <= 1)
         {
-            is_prime = 0;
+            is_prime = 0 ;
         }
         else
         {
@@ -38,19 +38,20 @@ int main(){
                 if (num % i == 0)
                 {
                     is_prime = 0 ;
+                    break ;
                 }
             }
         }
 
         if (is_prime)
         {
-            printf("%d ", num);
+            printf("%d", num);
         }
 
-        num--;
-        is_prime = 1; // Reset is_prime for the next iteration
-    } while (num >= 2);
-
+        num -- ;
+        is_prime = 1 ; // Reset is_prime for the next iteration
+    } 
+    while (num >= 2) ;
     printf("\n");
 
     return 0;
