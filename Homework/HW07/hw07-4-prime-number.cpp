@@ -12,24 +12,24 @@
         Enter number :
             100
     Output:
-
         97 89 83 79 73 71 67 61 59 53 47 43 41 37 31 29 23 19 17 13 11 7 5 3 2
-*/
-#include <stdio.h>
+*/#include <stdio.h>
 
-int main(){
-    int limit ;
-    int num = limit ;
-    int is_prime = 1 ; 
+int main()
+{
+    int limit;
 
     printf("Enter number: ");
-    scanf("%d", &limit) ;
+    scanf("%d", &limit);
+
+    int num = limit;
+    int is_prime = 1; // Assuming num is prime
 
     do
     {
         if (num <= 1)
         {
-            is_prime = 0 ;
+            is_prime = 0;
         }
         else
         {
@@ -37,21 +37,21 @@ int main(){
             {
                 if (num % i == 0)
                 {
-                    is_prime = 0 ;
-                    break ;
+                    is_prime = 0;
+                    break;
                 }
             }
         }
 
         if (is_prime)
         {
-            printf("%d", num);
+            printf("%d ", num);
         }
 
-        num -- ;
-        is_prime = 1 ; // Reset is_prime for the next iteration
-    } 
-    while (num >= 2) ;
+        num--;
+        is_prime = 1; // Reset is_prime for the next iteration
+    } while (num >= 2);
+
     printf("\n");
 
     return 0;
